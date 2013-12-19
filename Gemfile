@@ -15,6 +15,7 @@ gem 'devise_invitable'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
+gem 'rails_admin'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

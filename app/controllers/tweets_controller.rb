@@ -1,15 +1,17 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-
+before_filter :authenticate_user!
   # GET /tweets
   # GET /tweets.json
   def index
     @tweets = Tweet.all
+    @users = User.all
   end
 
   # GET /tweets/1
   # GET /tweets/1.json
   def show
+    @tweets = Tweet.find(params[:id])
   end
 
   # GET /tweets/new
@@ -25,7 +27,7 @@ class TweetsController < ApplicationController
   # POST /tweets.json
   def create
     @tweet = Tweet.new(tweet_params)
-
+    @tweet.user_id=current_user.id
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
@@ -49,6 +51,8 @@ class TweetsController < ApplicationController
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # DELETE /tweets/1
@@ -70,5 +74,6 @@ class TweetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
       params.require(:tweet).permit(:content, :user_id)
+
     end
 end
