@@ -1,10 +1,11 @@
-<h1>Listing tweets</h1>
+<h1>Listing all tweets</h1>
 
 <table>
   <thead>
+  <td></td>
     <tr>
       <th>Content</th>
-      <th>User</th>
+      <th>Author</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,18 +15,23 @@
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.content %></td>
-        <td><%= tweet.user.name%></td>
+        <td><br><br><%= tweet.content %></td>
+        <td><br><br><%= tweet.user.name %></td>
+        <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
+        <% unless current_user!=tweet.user%>
+          
         
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
+        <td><br><br><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>
+        <% end -%>
+       </tr>
+        <p>                       </p>
+        <p></p>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Tweet', new_tweet_path %>
+<%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton" %>
 

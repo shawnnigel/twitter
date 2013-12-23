@@ -1,31 +1,54 @@
-<h3>Home</h3>
-<h1>Listing tweets</h1>
+<h5>Welcome to Twitter</h5>
+
+<br>
+<br>
+<br>
+ <%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton1" %> <%= link_to 'All Tweets', 'tweets',:class=>"tweetbutton1" %>
+ <br>
+ <br>
+ <br>
+ <br>
+<h2>Your Tweets</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Content</th>
-      <th>User</th>
+      <th></th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 
-  <tbody>
+   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.content %></td>
-        <td><%= tweet.user.name %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if tweet.user==current_user %>
+        <td><br><br><%= tweet.content %></td>
+        
+        <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
+        <% unless current_user!=tweet.user%>
+          
+        
+        <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
+        <td><br><br><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>
+        <% end -%>
+       </tr>
+        <p>                       </p>
+        <p></p>
+        <% end %>
     <% end %>
   </tbody>
+  <br>
+
 </table>
 
 <br>
 
-<%= link_to 'New Tweet', new_tweet_path %>
+
+
+
+
+
 

@@ -11,3 +11,223 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+.button1 {
+	-moz-box-shadow:inset -1px -13px 16px -14px #bee2f9;
+	-webkit-box-shadow:inset -1px -13px 16px -14px #bee2f9;
+	box-shadow:inset -1px -13px 16px -14px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:27px;
+	-moz-border-radius-topleft:27px;
+	border-top-left-radius:27px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:27px;
+	-moz-border-radius-bottomright:27px;
+	border-bottom-right-radius:27px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:-11.79px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Comic Sans MS;
+	font-size:20px;
+	font-weight:bold;
+	font-style:normal;
+	height:41px;
+	line-height:41px;
+	width:85px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 1px 0px #7cacde;
+}
+.button1:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.button1:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+
+.button2 {
+	-moz-box-shadow:inset -1px -13px 16px -14px #e6cafc;
+	-webkit-box-shadow:inset -1px -13px 16px -14px #e6cafc;
+	box-shadow:inset -1px -13px 16px -14px #e6cafc;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c579ff), color-stop(1, #a341ee) );
+	background:-moz-linear-gradient( center top, #c579ff 5%, #a341ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c579ff', endColorstr='#a341ee');
+	background-color:#c579ff;
+	-webkit-border-top-left-radius:27px;
+	-moz-border-radius-topleft:27px;
+	border-top-left-radius:27px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:27px;
+	-moz-border-radius-bottomright:27px;
+	border-bottom-right-radius:27px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:-11.79px;
+	border:1px solid #a946f5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:20px;
+	font-weight:bold;
+	font-style:normal;
+	height:41px;
+	line-height:41px;
+	width:85px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 1px 0px #8628ce;
+}
+.button2:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a341ee), color-stop(1, #c579ff) );
+	background:-moz-linear-gradient( center top, #a341ee 5%, #c579ff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a341ee', endColorstr='#c579ff');
+	background-color:#a341ee;
+}.button2:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.button3 {
+	-moz-box-shadow:inset -1px -13px 16px -14px #f29c93;
+	-webkit-box-shadow:inset -1px -13px 16px -14px #f29c93;
+	box-shadow:inset -1px -13px 16px -14px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ed2711), color-stop(1, #f55656) );
+	background:-moz-linear-gradient( center top, #ed2711 5%, #f55656 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed2711', endColorstr='#f55656');
+	background-color:#ed2711;
+	-webkit-border-top-left-radius:27px;
+	-moz-border-radius-topleft:27px;
+	border-top-left-radius:27px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:27px;
+	-moz-border-radius-bottomright:27px;
+	border-bottom-right-radius:27px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:-11.79px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:20px;
+	font-weight:bold;
+	font-style:normal;
+	height:41px;
+	line-height:41px;
+	width:85px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.button3:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f55656), color-stop(1, #ed2711) );
+	background:-moz-linear-gradient( center top, #f55656 5%, #ed2711 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f55656', endColorstr='#ed2711');
+	background-color:#f55656;
+}.button3:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+
+.tweetbutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:37px;
+	-moz-border-radius-topleft:37px;
+	border-top-left-radius:37px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:37px;
+	-moz-border-radius-bottomright:37px;
+	border-bottom-right-radius:37px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:-4px;
+	border:6px solid #d0e3f5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:23px;
+	font-weight:bold;
+	font-style:normal;
+	height:64px;
+	line-height:64px;
+	width:199px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+}.tweetbutton:hover {
+	background-color:#39f028;
+}.tweetbutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.tweetbutton1 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #e184f3;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #e184f3;
+	box-shadow:inset 0px 1px 0px 0px #e184f3;
+	background-color:#c123de;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:-4px;
+	border:6px solid #a511c0;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Comic Sans MS;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	height:64px;
+	line-height:64px;
+	width:199px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #9b14b3;
+}.tweetbutton1:hover {
+	background-color:#a20dbd;
+}.tweetbutton1:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */

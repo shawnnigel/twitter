@@ -1,23 +1,28 @@
 body {
-  background-color: #fff;
+  background-color: #F62817;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px;
+  font-size: 18px;
 }
 
+h5{
+  font-size:45px;
+   color: blue;
+   backgroung-color: white;
+}
 a {
   color: #000;
   &:visited {
@@ -37,6 +42,7 @@ div {
 
 #notice {
   color: green;
+  border: 2px solid green;
 }
 
 .field_with_errors {
@@ -67,3 +73,4 @@ div {
     list-style: square;
   }
 }
+
