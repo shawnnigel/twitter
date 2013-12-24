@@ -19,7 +19,7 @@
         <td><br><br><%= tweet.user.name %></td>
         <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
         <% unless current_user!=tweet.user%>
-          
+           
         
         <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
         <td><br><br><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>

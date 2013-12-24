@@ -6,17 +6,20 @@ before_filter :authenticate_user!
   def index
     @tweets = Tweet.all
     @users = User.all
+
   end
 
   # GET /tweets/1
   # GET /tweets/1.json
   def show
-    @tweets = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
+    @user=User.all
   end
 
   # GET /tweets/new
   def new
     @tweet = Tweet.new
+    @user=User.all
   end
 
   # GET /tweets/1/edit
@@ -27,7 +30,7 @@ before_filter :authenticate_user!
   # POST /tweets.json
   def create
     @tweet = Tweet.new(tweet_params)
-    @tweet.user_id=current_user.id
+    @tweet.user=current_user
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
