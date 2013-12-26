@@ -16,10 +16,25 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
 gem 'rails_admin'
+gem 'mini_magick', '3.5.0'
+gem 'carrierwave'
+gem 'public_activity'
+gem "acts_as_follower"
+gem 'heroku'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'pg'
+
+end
+
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
 end
