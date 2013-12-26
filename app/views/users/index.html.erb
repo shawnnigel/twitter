@@ -23,8 +23,20 @@
         <%= render user %>
       </td>
       <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
+
+       
+
+
+       <% if current_user.following?(user) %>
+      <td><%= link_to "unfollow", unfollow_user_path(user)unless user == current_user %></td>
+      <%else %>
+     <td><%= link_to "follow", follow_user_path(user) unless user == current_user%></td>
+     <% end%>
+
+
     </tr>
   <% end %>
   </tbody>
 </table>
+
 </div>

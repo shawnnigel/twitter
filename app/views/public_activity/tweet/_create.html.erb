@@ -1,0 +1,8 @@
+added a tweet
+ <% @tweets.each do |tweet| %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.tweet.user.name, activity.trackable %>
+<% else %>
+  which has since been removed
+<% end %>
+<% end %>

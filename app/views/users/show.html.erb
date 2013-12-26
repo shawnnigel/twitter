@@ -1,3 +1,50 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<h3></h3>
+<h1> <%= @user.name.titleize %></h1> <Ul> 
+<ul><Ul><ul><ul><Ul><ul><Ul><ul><ul><Ul><ul><ul><Ul><ul><ul><Ul><h2><% if current_user.following?(@user) %>
+      <td><%= link_to "Unfollow", unfollow_user_path(@user)unless @user == current_user %></td>
+      <%else %>
+     <td><%= link_to "Follow", follow_user_path(@user) unless @user == current_user%></td>
+     <% end%> 
+     </h2>
+     </ul></Ul></ul></ul></Ul></ul></ul></Ul></ul></Ul></Ul></ul></Ul></ul></Ul></Ul></ul></Ul>
+     <Ul>Email: <%= @user.email  %>
+<%= image_tag @user.image_url.to_s %>
+
+<h3>Date Of Birth: <%=@user.birthday%></h3>
+
+<h2><%= @user.name.titleize %>'s Tweets</h2>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+   <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+      <% if tweet.user==@user %>
+        <td><br><br><%= tweet.content %></td>
+        
+        <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
+        <% unless current_user!=@user%>
+          
+        
+        <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
+        <td><br><br><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>
+        <% end -%>
+       </tr>
+        <p>                       </p>
+        <p></p>
+        <% end %>
+    <% end %>
+  </tbody>
+  <br>
+
+</table>
+
+<h2><a href="javascript:history.back()">Back</a></h2>

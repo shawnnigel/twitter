@@ -5,5 +5,8 @@ class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable, #:confirmable,
          :recoverable, :rememberable, :trackable, :validatable
  
-  has_many :tweets
+  has_many :tweets, dependent: :destroy
+  mount_uploader :image, ImageUploader
+  acts_as_followable
+  acts_as_follower
 end

@@ -1,0 +1,34 @@
+<h1></h1>
+
+  <br>
+<% @activities.each do |activity| %>
+
+ <% if activity.key=="tweet.destroy" %>
+<% @deadtweet=Tweet.find_by_id(activity.trackable_id) %>
+<%else%>
+ 	
+ 
+  
+<% dude= User.find_by_id(activity.owner_id) %>
+  <% dudestweet=Tweet.find_by_id(activity.trackable_id)%>
+
+ <% if dudestweet==@deadtweet %>
+ 
+ <%else%>
+<%if activity.key=="tweet.create" %>
+  <h2><br><br><%= dudestweet.content%></h2>    
+  <h3><br>Was Created By <%=link_to dude.name ,dude %> </h3> <%=distance_of_time_in_words(dudestweet.created_at,Time.now)  %> ago  
+ <% elsif activity.key=="tweet.update" %>
+  <h2><br><br><%= dudestweet.content%></h2>    
+  <h3><br>Was Updated By <%=link_to dude.name ,dude %> </h3>  <%=distance_of_time_in_words(dudestweet.updated_at,Time.now)  %> ago 
+	        
+<%   end        %>
+<% end %>
+	
+  
+  
+ 
+<% end %>
+
+
+<% end %>

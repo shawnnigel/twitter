@@ -4,6 +4,10 @@
   <%= display_base_errors resource %>
   <%= f.input :name, :autofocus => true %>
   <%= f.input :email, :required => true %>
+  <%= f.date_select :birthday,:start_year => Date.current.year, :end_year => 1900,:order => [:day, :month, :year] %>
+ 
+    <%= f.file_field :image %>
+  
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
