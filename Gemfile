@@ -28,6 +28,7 @@ group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
+ 
   gem 'pg'
 
 end
@@ -35,6 +36,4 @@ end
 group :production do
   gem 'pg'
 end
-group :development, :test do
-  gem 'sqlite3'
-ends
+
