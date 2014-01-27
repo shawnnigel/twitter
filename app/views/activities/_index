@@ -1,6 +1,7 @@
 <h1></h1>
 
   <br>
+<h3><%= paginate @activities %></h3>
 <% @activities.each do |activity| %>
 
  <% if activity.key=="tweet.destroy" %>

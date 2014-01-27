@@ -1,4 +1,6 @@
 Twitter::Application.routes.draw do
+  resources :messages
+
   get "activities/index"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :tweets

@@ -3,8 +3,17 @@ class UsersController < ApplicationController
 
   def index
     #authorize! :index, @user, :message => 'Not authorized as an administrator.'
-    @users = User.all
-    @tweets = Tweet.all
+   
+@users=Kaminari.paginate_array(User.all).page(params[:page]).per(8)
+    @projects = User.search(params[:search])
+    if @projects== nil
+      @users = User.all.page(params[:page]).per(8)
+    else
+   @users=Kaminari.paginate_array(@projects).page(params[:page]).per(8)
+    
+    
+    #@projects = User.search(params[:search])
+  end
   end
 
   def show

@@ -1,5 +1,5 @@
 body {
-  background-color: #F62817;
+  background-color: #66FFFF;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 20px;
@@ -21,8 +21,17 @@ pre {
 h5{
   font-size:45px;
    color: blue;
-   backgroung-color: white;
+   background-color: inherit;
 }
+
+h6{
+  font-size:18px;
+   color: blue;
+   background-color: inherit;
+    line-height: 25px;
+    margin-left: 60px;
+}
+
 a {
   color: #000;
   &:visited {
@@ -42,7 +51,7 @@ div {
 
 #notice {
   color: green;
-  border: 2px solid green;
+  border: 4px solid green;
 }
 
 .field_with_errors {
@@ -66,7 +75,7 @@ div {
     margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
-    color: #fff;
+    color: #660033;
   }
   ul li {
     font-size: 12px;

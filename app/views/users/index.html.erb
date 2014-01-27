@@ -1,36 +1,46 @@
 <h3>Users</h3>
+
+<%= form_tag users_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <div class="span8">
 <table class="table table-condensed">
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Registered</th>
-      <th>Role</th>
+      <th></th>
+      
+      <th></th>
+      
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
+  
+<%= paginate @users%>
   <% @users.each do |user| %>
     <tr>
-      <td><%= link_to user.name, user %></td>
-      <td><%= user.email %></td>
-      <td><%= user.created_at.to_date %></td>
-      <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
-      <td>
-        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
+      <h1><td><%= link_to user.name.titleize, user %></td></h1>
+      
+      <td><ul><ul><ul><ul><ul></td>
+      <td><ul><ul><ul><ul><ul></td>
+      <td><ul><ul><ul><ul><ul></td>
+     
         <%= render user %>
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
-
+    
        
 
 
        <% if current_user.following?(user) %>
-      <td><%= link_to "unfollow", unfollow_user_path(user)unless user == current_user %></td>
+     <div id ="follow">
+      <td><%= link_to "unfollow", unfollow_user_path(user) , :class =>"button5" unless user == current_user %></td></div>
       <%else %>
-     <td><%= link_to "follow", follow_user_path(user) unless user == current_user%></td>
+     <div id="unfollow"><td><%= link_to "follow", follow_user_path(user), :class =>"button4"unless user == current_user%></td></div>
      <% end%>
 
 
@@ -38,5 +48,5 @@
   <% end %>
   </tbody>
 </table>
-
+<%= paginate @users%>
 </div>

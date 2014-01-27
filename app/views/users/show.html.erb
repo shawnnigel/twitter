@@ -1,14 +1,15 @@
 <h3></h3>
 <h1> <%= @user.name.titleize %></h1> <Ul> 
 <ul><Ul><ul><ul><Ul><ul><Ul><ul><ul><Ul><ul><ul><Ul><ul><ul><Ul><h2><% if current_user.following?(@user) %>
-      <td><%= link_to "Unfollow", unfollow_user_path(@user)unless @user == current_user %></td>
+      <td><%= link_to "Unfollow", unfollow_user_path(@user), :class =>"button5"unless @user == current_user %></td>
       <%else %>
-     <td><%= link_to "Follow", follow_user_path(@user) unless @user == current_user%></td>
+     <td><%= link_to "Follow", follow_user_path(@user), :class =>"button4"unless @user == current_user%></td>
      <% end%> 
      </h2>
      </ul></Ul></ul></ul></Ul></ul></ul></Ul></ul></Ul></Ul></ul></Ul></ul></Ul></Ul></ul></Ul>
      <Ul>Email: <%= @user.email  %>
-<%= image_tag @user.image_url.to_s %>
+<%= image_tag @user.image_url.to_s  %>
+
 
 <h3>Date Of Birth: <%=@user.birthday%></h3>
 

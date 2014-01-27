@@ -4,12 +4,17 @@
   <%= display_base_errors resource %>
   <%= f.input :name, :autofocus => true %>
   <%= f.input :email, :required => true %>
+  <br>
   <%= f.date_select :birthday,:start_year => Date.current.year, :end_year => 1900,:order => [:day, :month, :year] %>
   <%= image_tag @user.image_url.to_s %>
-    <%= f.file_field :image %>
+   <h2>Add A Profile Picture</h2> 
+   <br><%= f.file_field :image %>
+    <br>
   
   <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
   <%= f.input :password_confirmation, :required => false %>
+  <br>
+  <%= f.input :phone %>
   <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
   <%= f.button :submit, 'Update', :class => 'btn-primary' %>
 <% end %>

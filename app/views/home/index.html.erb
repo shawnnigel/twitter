@@ -3,10 +3,16 @@
 <br>
 <br>
 <br>
- <%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton1" %> <%= link_to 'All Tweets', 'tweets',:class=>"tweetbutton1" %>
+<div id="newtweet">
+ <%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton1", :remote=> true %> <%= link_to 'All Tweets', 'tweets',:class=>"tweetbutton1" %>
+ </div>
  <br>
  <br>
- 
+ <div class="right bar">
+ <a class="twitter-timeline" href="https://twitter.com/shawn_nigel" data-widget-id="426738179392024577">Tweets by @shawn_nigel</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
  <br>
 <ul><h1>News Feed</h1></ul>
 <%= render 'activities/index' %>

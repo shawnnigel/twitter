@@ -1,0 +1,38 @@
+<div id="post">
+<table>
+  <thead>
+  <td></td>
+    <tr>
+      <th>Content</th>
+      <th>Author</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    
+  </thead>
+  <tbody>
+  
+    <% @tweets.each do |tweet| %>
+
+      <tr>
+        <td><br><br><h3><%= tweet.content %></h3></td>
+        <td><br><br><h6><%=link_to tweet.user.name.titleize ,tweet.user %></h6></td>
+        <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
+        <% unless current_user!=tweet.user%>
+           
+        
+        <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
+        <td><br><br><%= button_to 'Delete', tweet, :remote => true, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>
+        <% end %>
+       </tr>
+        <p>                       </p>
+        <p></p>
+    <% end %>
+    
+  </tbody>
+
+</table>
+
+<br>
+</div>

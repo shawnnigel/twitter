@@ -3,7 +3,9 @@
  <%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton1" %> <%= link_to 'All Tweets', 'tweets',:class=>"tweetbutton1" %>
 
  <br>
+<h3><%= paginate @activities %></h3>
 <% @activities.each do |activity| %>
+
 
  <% if activity.key=="tweet.destroy" %>
 <% @deadtweet=Tweet.find_by_id(activity.trackable_id) %>

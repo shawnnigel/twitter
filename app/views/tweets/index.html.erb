@@ -1,37 +1,35 @@
 <h1>Listing all tweets</h1>
 
-<table>
-  <thead>
-  <td></td>
-    <tr>
-      <th>Content</th>
-      <th>Author</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><br><br><%= tweet.content %></td>
-        <td><br><br><%=link_to tweet.user.name ,tweet.user %></td>
-        <td><br><br><%= link_to 'Show', tweet, :class =>"button2" %></td>
-        <% unless current_user!=tweet.user%>
-           
-        
-        <td><br><br><%= link_to 'Edit', edit_tweet_path(tweet), :class =>"button1" %></td>
-        <td><br><br><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button3" %></td>
-        <% end -%>
-       </tr>
-        <p>                       </p>
-        <p></p>
-    <% end %>
-  </tbody>
-</table>
+<div id="forms">
 
-<br>
+<%=render 'form'%>
+</div>
+<ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><ol><div>
+<%= form_tag tweets_url, :method => 'get',:remote=>true do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+   <button> <%= submit_tag "Search",:remote=>true, :content => nil, :class =>"tweetbutton" %></button>
+  </p>
+<% end %>
+  <script type="text/javascript">
+        var auto_refresh = setInterval(
+        function(){
+            $('#posts').empty();
+            $('#posts').load(' #posts').fadeIn("slow");
+        }, 30000); // refresh every 10000 milliseconds
+    </script>
 
-<%= link_to 'New Tweet', new_tweet_path, :class =>"tweetbutton" %>
+</div></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol></ol>
+<h3><%= paginate @tweets %></h3>
+<div id="poster">
+<div id="posts">
+
+<%= render 'tweets' %>
+
+</div>
+
+<h3><%= paginate @tweets %></h3>
+</div>
+
 
